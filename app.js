@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const rIndex = require('./routes/index');
 const rAdd = require('./routes/add');
+const chalk = require('chalk');
 const app = express();
 const port = 3000;
 
@@ -36,5 +37,5 @@ app.use(rAdd);
 
 
 app.listen(port, (err, data) => {
-    console.log(`server http://localhost:${port} da ishladi`);
+    console.log(chalk.bgBlue.white(`server http://localhost:${port} da ishladi`));
 });
